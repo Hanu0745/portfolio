@@ -7,12 +7,11 @@ import { Badge, Tag } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { ProjectLinks } from "@/components/ui/project-links";
 import { Section, SectionHeader } from "@/components/ui/section";
-import { cn } from "@/lib/cn";
 
-function ProjectCard({ project, prominent }: { project: Project; prominent: boolean }) {
+function ProjectCard({ project }: { project: Project }) {
   const hasCaseStudy = Boolean(project.caseStudy);
   return (
-    <Card interactive className={cn("flex h-full flex-col p-6 sm:p-7", prominent && "lg:col-span-2")}>
+    <Card interactive className="flex flex-col p-6 sm:p-7">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
           <h3 className="text-xl font-semibold tracking-tight text-fg">
@@ -31,7 +30,7 @@ function ProjectCard({ project, prominent }: { project: Project; prominent: bool
 
       <p className="text-pretty mt-4 text-[15px] leading-relaxed text-fg-secondary">{project.description}</p>
 
-      <ul className={cn("mt-5 space-y-2", prominent && "sm:grid sm:grid-cols-2 sm:gap-x-6 sm:space-y-0 sm:gap-y-2")}>
+      <ul className="mt-5 space-y-2">
         {project.highlights.map((item) => (
           <li key={item} className="flex gap-3 text-sm leading-relaxed text-fg-secondary">
             <span aria-hidden className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
@@ -40,7 +39,7 @@ function ProjectCard({ project, prominent }: { project: Project; prominent: bool
         ))}
       </ul>
 
-      <div className="mt-auto pt-6">
+      <div className="pt-6">
         <p className="mb-2 font-mono text-[11px] tracking-wider text-muted uppercase">Role · {project.role}</p>
         <ul className="flex flex-wrap gap-1.5" aria-label="Technologies">
           {project.technologies.map((tech) => (
@@ -73,10 +72,10 @@ export function Projects() {
         title="More production systems."
         lede="Projects chosen for technical depth and real-world use. Where the code is private, the work is presented as a case study."
       />
-      <div className="grid gap-5 lg:grid-cols-3">
+      <div className="grid items-start gap-5 md:grid-cols-2">
         {secondaryProjects.map((project, i) => (
-          <Reveal key={project.slug} delay={i * 0.06} className={cn("h-full", i === 0 && "lg:col-span-2")}>
-            <ProjectCard project={project} prominent={i === 0} />
+          <Reveal key={project.slug} delay={i * 0.06}>
+            <ProjectCard project={project} />
           </Reveal>
         ))}
       </div>

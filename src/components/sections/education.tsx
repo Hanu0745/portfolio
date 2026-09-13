@@ -8,9 +8,9 @@ export function Education() {
   return (
     <Section id="education" className="border-t border-border">
       <SectionHeader index="07" eyebrow="Education & credentials" title="Background." />
-      <div className="grid gap-5 lg:grid-cols-3">
-        <Reveal className="h-full">
-          <div className="h-full rounded-xl border border-border bg-surface p-6">
+      <div className="grid items-start gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <Reveal>
+          <div className="rounded-xl border border-border bg-surface p-6">
             <GraduationCap className="h-5 w-5 text-accent-text" aria-hidden />
             <h3 className="mt-4 font-mono text-[11px] tracking-wider text-muted uppercase">Education</h3>
             {education.map((entry) => (
@@ -25,8 +25,8 @@ export function Education() {
           </div>
         </Reveal>
 
-        <Reveal delay={0.05} className="h-full">
-          <div className="h-full rounded-xl border border-border bg-surface p-6">
+        <Reveal delay={0.05}>
+          <div className="rounded-xl border border-border bg-surface p-6">
             <BadgeCheck className="h-5 w-5 text-accent-text" aria-hidden />
             <h3 className="mt-4 font-mono text-[11px] tracking-wider text-muted uppercase">Certification</h3>
             {certifications.map((cert) => (
@@ -45,8 +45,8 @@ export function Education() {
           </div>
         </Reveal>
 
-        <Reveal delay={0.1} className="h-full">
-          <div className="h-full rounded-xl border border-border bg-surface p-6">
+        <Reveal delay={0.1}>
+          <div className="rounded-xl border border-border bg-surface p-6">
             <Award className="h-5 w-5 text-accent-text" aria-hidden />
             <h3 className="mt-4 font-mono text-[11px] tracking-wider text-muted uppercase">Achievements</h3>
             <ul className="mt-3 space-y-3">
