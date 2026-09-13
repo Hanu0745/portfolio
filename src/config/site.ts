@@ -2,15 +2,15 @@
  * Site-wide configuration.
  *
  * SITE_URL drives canonical links, Open Graph URLs, the sitemap and robots.txt.
- * Set NEXT_PUBLIC_SITE_URL in your hosting provider (e.g. https://yourdomain.com).
- * On Vercel the production URL is picked up automatically as a fallback.
+ * The production domain is the default; NEXT_PUBLIC_SITE_URL overrides it for
+ * previews or a future move.
  */
+const PRODUCTION_URL = "https://hanu.kaziva.in";
+
 function resolveSiteUrl(): string {
   const explicit = process.env.NEXT_PUBLIC_SITE_URL;
   if (explicit) return explicit.replace(/\/$/, "");
-  const vercel = process.env.VERCEL_PROJECT_PRODUCTION_URL;
-  if (vercel) return `https://${vercel}`;
-  return "http://localhost:3000";
+  return PRODUCTION_URL;
 }
 
 export const siteConfig = {

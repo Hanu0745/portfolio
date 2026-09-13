@@ -17,7 +17,7 @@ npm run lint
 
 1. Push the repository to GitHub.
 2. Import it on Vercel (or any Node host). No special build settings are needed.
-3. Set `NEXT_PUBLIC_SITE_URL` to the final public URL (see `.env.example`). On Vercel this is optional.
+3. The production URL (https://hanu.kaziva.in) is set in `src/config/site.ts`. `NEXT_PUBLIC_SITE_URL` overrides it if needed (see `.env.example`).
 
 ## Where the content lives
 
