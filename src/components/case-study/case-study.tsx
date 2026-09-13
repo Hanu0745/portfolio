@@ -69,11 +69,11 @@ export function CaseStudy({ project }: { project: Project_ }) {
           <dl className="mt-8 grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-4">
             <Meta label="Role" value={project.role} />
             <Meta label="Status" value={project.statusLabel} />
-            {project.period ? <Meta label="Launched" value={project.period} /> : <Meta label="Category" value={categoryLabel(project.category)} />}
-            <Meta
-              label="Organization"
-              value={
-                project.organization ? (
+            {project.period ? <Meta label="Year" value={project.period} /> : null}
+            {project.organization ? (
+              <Meta
+                label="Organization"
+                value={
                   project.organization.href ? (
                     <ExternalLink href={project.organization.href} className="text-accent-text hover:underline">
                       {project.organization.name}
@@ -81,11 +81,11 @@ export function CaseStudy({ project }: { project: Project_ }) {
                   ) : (
                     project.organization.name
                   )
-                ) : (
-                  "Client engagement"
-                )
-              }
-            />
+                }
+              />
+            ) : (
+              <Meta label="Category" value={categoryLabel(project.category)} />
+            )}
           </dl>
 
           <div className="mt-8">
