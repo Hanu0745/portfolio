@@ -82,10 +82,10 @@ export function AIEngineering() {
         <Pipeline steps={workflow} emphasize={[3]} />
       </div>
 
-      <div className="mt-14 grid items-start gap-5 sm:grid-cols-2">
+      <div className="mt-14 grid gap-5 sm:grid-cols-2">
         {practices.map((practice, i) => (
-          <Reveal key={practice.title} delay={i * 0.05}>
-            <Card className="p-5 sm:p-6">
+          <Reveal key={practice.title} delay={i * 0.05} className="h-full">
+            <Card className="h-full p-5 sm:p-6">
               <practice.icon className="h-5 w-5 text-accent-text" aria-hidden />
               <h3 className="mt-4 text-base font-semibold text-fg">{practice.title}</h3>
               <p className="text-pretty mt-2 text-sm leading-relaxed text-muted">{practice.detail}</p>

@@ -11,7 +11,7 @@ import { Section, SectionHeader } from "@/components/ui/section";
 function ProjectCard({ project }: { project: Project }) {
   const hasCaseStudy = Boolean(project.caseStudy);
   return (
-    <Card interactive className="flex flex-col p-6 sm:p-7">
+    <Card interactive className="flex h-full flex-col p-6 sm:p-7">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
           <h3 className="text-xl font-semibold tracking-tight text-fg">
@@ -39,7 +39,7 @@ function ProjectCard({ project }: { project: Project }) {
         ))}
       </ul>
 
-      <div className="pt-6">
+      <div className="mt-auto pt-6">
         <p className="mb-2 font-mono text-[11px] tracking-wider text-muted uppercase">Role · {project.role}</p>
         <ul className="flex flex-wrap gap-1.5" aria-label="Technologies">
           {project.technologies.map((tech) => (
@@ -72,9 +72,9 @@ export function Projects() {
         title="More production systems."
         lede="Projects chosen for technical depth and real-world use. Where the code is private, the work is presented as a case study."
       />
-      <div className="grid items-start gap-5 md:grid-cols-2">
+      <div className="grid gap-5 md:grid-cols-2">
         {secondaryProjects.map((project, i) => (
-          <Reveal key={project.slug} delay={i * 0.06}>
+          <Reveal key={project.slug} delay={i * 0.06} className="h-full">
             <ProjectCard project={project} />
           </Reveal>
         ))}
