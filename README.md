@@ -1,6 +1,6 @@
 # Hanumanthu Buddha · Portfolio
 
-Personal portfolio positioning Hanumanthu Buddha as a Senior AI Full Stack Developer, with Vaktora as the flagship case study.
+Personal portfolio positioning Hanumanthu Buddha as a AI Full Stack Developer, with Vaktora as the flagship case study.
 
 Built with Next.js 16 (App Router), TypeScript (strict), Tailwind CSS v4, Framer Motion and Lucide icons. Every route is statically generated.
 

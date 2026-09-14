@@ -16,9 +16,9 @@ function resolveSiteUrl(): string {
 export const siteConfig = {
   url: resolveSiteUrl(),
   name: "Hanumanthu Buddha",
-  title: "Hanumanthu Buddha · Senior AI Full Stack Developer",
+  title: "Hanumanthu Buddha · AI Full Stack Developer",
   description:
-    "Senior AI Full Stack Developer building production AI products end to end: React, React Native, Node.js, MongoDB, real-time systems and LLM evaluation pipelines. Creator of Vaktora, an AI interview-prep app on Google Play.",
+    "AI Full Stack Developer building production AI products end to end: React, React Native, Node.js, MongoDB, real-time systems and LLM evaluation pipelines. Creator of Vaktora, an AI interview-prep app on Google Play.",
   keywords: [
     "Hanumanthu Buddha",
     "AI Full Stack Developer",

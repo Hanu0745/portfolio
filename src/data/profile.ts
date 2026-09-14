@@ -2,7 +2,7 @@ export const profile = {
   name: "Hanumanthu Buddha",
   firstName: "Hanumanthu",
   /** Positioning used in the hero, metadata and structured data. */
-  title: "Senior AI Full Stack Developer",
+  title: "AI Full Stack Developer",
   /** Job title as it appears on the resume. */
   resumeTitle: "Full Stack Software Engineer",
   location: "Kakinada, India",
@@ -10,7 +10,7 @@ export const profile = {
   headline: "I build AI-powered products end to end.",
   subheadline:
     "Full-stack engineer with 3+ years shipping production systems: real-time interview platforms, LLM evaluation pipelines and multi-role SaaS, built on React, React Native, Node.js and MongoDB.",
-  availability: "Open to senior full-stack and AI engineering roles",
+  availability: "Open to full-stack and AI engineering roles",
   photo: {
     src: "/images/hanumanthu-buddha.jpg",
     alt: "Portrait of Hanumanthu Buddha",
